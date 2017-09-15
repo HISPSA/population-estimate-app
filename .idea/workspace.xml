@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b683ccda-4ef4-4efe-be65-5eaf3f599c42" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/population-estimate-app.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/population_estimate_app_node_modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\.bin\json5" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\.bin\json5.cmd" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\big.js\LICENCE" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\big.js\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\big.js\big.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\big.js\big.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\big.js\package.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\emojis-list\CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\emojis-list\LICENSE.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\emojis-list\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\emojis-list\index.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\emojis-list\package.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\json5\CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\json5\LICENSE.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\json5\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\json5\lib\cli.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\json5\lib\json5.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\json5\lib\require.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\json5\package.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\loader-utils\CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\loader-utils\LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\loader-utils\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\loader-utils\lib\getCurrentRequest.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\loader-utils\lib\getHashDigest.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\loader-utils\lib\getOptions.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\loader-utils\lib\getRemainingRequest.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\loader-utils\lib\index.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\loader-utils\lib\interpolateName.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\loader-utils\lib\isUrlRequest.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\loader-utils\lib\parseQuery.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\loader-utils\lib\parseString.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\loader-utils\lib\stringifyRequest.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\loader-utils\lib\urlToRequest.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\loader-utils\package.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\magic-string\CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\magic-string\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\magic-string\dist\magic-string.cjs.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\magic-string\dist\magic-string.cjs.js.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\magic-string\dist\magic-string.es.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\magic-string\dist\magic-string.es.js.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\magic-string\dist\magic-string.umd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\magic-string\dist\magic-string.umd.js.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\magic-string\index.d.ts" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\magic-string\package.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\magic-string\src\Bundle.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\magic-string\src\Chunk.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\magic-string\src\MagicString.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\magic-string\src\index-legacy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\magic-string\src\index.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\magic-string\src\utils\Mappings.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\magic-string\src\utils\SourceMap.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\magic-string\src\utils\Stats.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\magic-string\src\utils\btoa.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\magic-string\src\utils\getLocator.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\magic-string\src\utils\getRelativePath.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\magic-string\src\utils\guessIndent.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\magic-string\src\utils\hasOwnProp.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\magic-string\src\utils\isObject.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\source-map\CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\source-map\LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\source-map\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\source-map\dist\source-map.debug.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\source-map\dist\source-map.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\source-map\dist\source-map.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\source-map\dist\source-map.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\source-map\lib\array-set.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\source-map\lib\base64-vlq.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\source-map\lib\base64.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\source-map\lib\binary-search.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\source-map\lib\mapping-list.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\source-map\lib\quick-sort.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\source-map\lib\source-map-consumer.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\source-map\lib\source-map-generator.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\source-map\lib\source-node.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\source-map\lib\util.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\source-map\package.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\source-map\source-map.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\vlq\CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\vlq\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\vlq\dist\vlq.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\vlq\package.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\node_modules\vlq\src\vlq.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\package.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\src\compiler_host.d.ts" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\src\compiler_host.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\src\compiler_host.js.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\src\entry_resolver.d.ts" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\src\entry_resolver.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\src\entry_resolver.js.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\src\extract_i18n_plugin.d.ts" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\src\extract_i18n_plugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\src\extract_i18n_plugin.js.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\src\index.d.ts" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\src\index.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\src\index.js.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\src\lazy_routes.d.ts" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\src\lazy_routes.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\src\lazy_routes.js.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\src\loader.d.ts" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\src\loader.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\src\loader.js.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\src\paths-plugin.d.ts" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\src\paths-plugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\src\paths-plugin.js.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\src\plugin.d.ts" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\src\plugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\src\plugin.js.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\src\refactor.d.ts" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\src\refactor.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\src\refactor.js.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\src\resource_loader.d.ts" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\src\resource_loader.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\src\resource_loader.js.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\src\webpack.d.ts" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\src\webpack.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Workspace\HISP\Population Estimate\population-estimate-app\node_modules\@ngtools\webpack\src\webpack.js.map" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.angular-cli.json" afterPath="$PROJECT_DIR$/.angular-cli.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/rxjs/observable/FromObservable.js.map" afterPath="$PROJECT_DIR$/node_modules/rxjs/observable/FromObservable.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/rxjs/src/observable/FromObservable.ts" afterPath="$PROJECT_DIR$/node_modules/rxjs/src/observable/FromObservable.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/rxjs/Observable.d.ts" afterPath="$PROJECT_DIR$/node_modules/rxjs/Observable.d.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/rxjs/Observable.js" afterPath="$PROJECT_DIR$/node_modules/rxjs/Observable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/rxjs/src/Observable.ts" afterPath="$PROJECT_DIR$/node_modules/rxjs/src/Observable.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/rxjs/bundles/Rx.js" afterPath="$PROJECT_DIR$/node_modules/rxjs/bundles/Rx.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/rxjs/bundles/Rx.min.js.map" afterPath="$PROJECT_DIR$/node_modules/rxjs/bundles/Rx.min.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/rxjs/bundles/Rx.min.js" afterPath="$PROJECT_DIR$/node_modules/rxjs/bundles/Rx.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/app.component.ts" afterPath="$PROJECT_DIR$/src/app/app.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/app.module.ts" afterPath="$PROJECT_DIR$/src/app/app.module.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/rxjs/operator/catch.js.map" afterPath="$PROJECT_DIR$/node_modules/rxjs/operator/catch.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/rxjs/src/operator/catch.ts" afterPath="$PROJECT_DIR$/node_modules/rxjs/src/operator/catch.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/rxjs/operator/defaultIfEmpty.js.map" afterPath="$PROJECT_DIR$/node_modules/rxjs/operator/defaultIfEmpty.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/rxjs/src/operator/defaultIfEmpty.ts" afterPath="$PROJECT_DIR$/node_modules/rxjs/src/operator/defaultIfEmpty.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/rxjs/operator/filter.js.map" afterPath="$PROJECT_DIR$/node_modules/rxjs/operator/filter.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/rxjs/operator/filter.js" afterPath="$PROJECT_DIR$/node_modules/rxjs/operator/filter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/rxjs/src/operator/filter.ts" afterPath="$PROJECT_DIR$/node_modules/rxjs/src/operator/filter.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/rxjs/add/observable/generate.d.ts" afterPath="$PROJECT_DIR$/node_modules/rxjs/add/observable/generate.d.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/rxjs/add/observable/generate.js.map" afterPath="$PROJECT_DIR$/node_modules/rxjs/add/observable/generate.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/rxjs/add/observable/generate.js" afterPath="$PROJECT_DIR$/node_modules/rxjs/add/observable/generate.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/rxjs/src/add/observable/generate.ts" afterPath="$PROJECT_DIR$/node_modules/rxjs/src/add/observable/generate.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/rxjs/add/observable/onErrorResumeNext.d.ts" afterPath="$PROJECT_DIR$/node_modules/rxjs/add/observable/onErrorResumeNext.d.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/rxjs/add/observable/onErrorResumeNext.js.map" afterPath="$PROJECT_DIR$/node_modules/rxjs/add/observable/onErrorResumeNext.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/rxjs/add/observable/onErrorResumeNext.js" afterPath="$PROJECT_DIR$/node_modules/rxjs/add/observable/onErrorResumeNext.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/rxjs/operator/onErrorResumeNext.js" afterPath="$PROJECT_DIR$/node_modules/rxjs/operator/onErrorResumeNext.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/rxjs/src/add/observable/onErrorResumeNext.ts" afterPath="$PROJECT_DIR$/node_modules/rxjs/src/add/observable/onErrorResumeNext.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/rxjs/src/operator/onErrorResumeNext.ts" afterPath="$PROJECT_DIR$/node_modules/rxjs/src/operator/onErrorResumeNext.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/rxjs/package.json" afterPath="$PROJECT_DIR$/node_modules/rxjs/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/rxjs/add/observable/race.d.ts" afterPath="$PROJECT_DIR$/node_modules/rxjs/add/observable/race.d.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/rxjs/add/observable/race.js.map" afterPath="$PROJECT_DIR$/node_modules/rxjs/add/observable/race.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/rxjs/add/observable/race.js" afterPath="$PROJECT_DIR$/node_modules/rxjs/add/observable/race.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/rxjs/src/add/observable/race.ts" afterPath="$PROJECT_DIR$/node_modules/rxjs/src/add/observable/race.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/rxjs/operator/timeout.d.ts" afterPath="$PROJECT_DIR$/node_modules/rxjs/operator/timeout.d.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/rxjs/operator/timeout.js.map" afterPath="$PROJECT_DIR$/node_modules/rxjs/operator/timeout.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/rxjs/operator/timeout.js" afterPath="$PROJECT_DIR$/node_modules/rxjs/operator/timeout.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/rxjs/src/operator/timeout.ts" afterPath="$PROJECT_DIR$/node_modules/rxjs/src/operator/timeout.ts" />
+    </list>
+    <ignored path="population-estimate-app.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="population-estimate-app" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/.angular-cli.json" />
+        <option value="$PROJECT_DIR$/src/app/providers/Option-sets.service.ts" />
+        <option value="$PROJECT_DIR$/src/app/providers/dataelement.service.ts" />
+        <option value="$PROJECT_DIR$/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/src/app/form-population-estimate/form-population-estimate.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/form-population-estimate/form-population-estimate.component.html" />
+      </list>
+    </option>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1050" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="population-estimate-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="population-estimate-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="population-estimate-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../IRD/Moza/openmrs-mobile-master" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="editorconfig.notification" value="Applied .editorconfig settings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Workspace\HISP\Population Estimate\population-estimate-app\src\app" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
+      <setting name="configLocationType" value="CONFIG_FILE" />
+      <setting name="settingsFile" value="" />
+      <setting name="serverType" value="INTERNAL" />
+      <setting name="preferredDebugBrowser" value="Chrome" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <list size="0" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b683ccda-4ef4-4efe-be65-5eaf3f599c42" name="Default" comment="" />
+      <created>1505213386020</created>
+      <option name="number" value="Default" />
+      <updated>1505213386020</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/app/form-population-estimate/form-population-estimate.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="894">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33801168" vertical-offset="0" max-vertical-offset="855">
+          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.angular-cli.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2937788" vertical-offset="0" max-vertical-offset="1190">
+          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="894">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.32" vertical-offset="0" max-vertical-offset="595">
+          <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/providers/Option-sets.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.136939" vertical-offset="0" max-vertical-offset="869">
+          <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/providers/dataset.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.43037975" vertical-offset="0" max-vertical-offset="869">
+          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/form-population-estimate/form-population-estimate.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.78341013" vertical-offset="0" max-vertical-offset="868">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/form-population-estimate/form-population-estimate.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19562715" vertical-offset="0" max-vertical-offset="869">
+          <caret line="10" column="47" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/providers/dataelement.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.68469507" vertical-offset="0" max-vertical-offset="869">
+          <caret line="35" column="27" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
