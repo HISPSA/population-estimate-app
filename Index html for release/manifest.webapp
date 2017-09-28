@@ -1,0 +1,15 @@
+
+{
+	"version":"1.0.0"
+	,"name":"Population Estimates"
+	,"description":"Population Estimates"
+	,"icons":{"16":null,"48":"","128":null}
+	,"developer":{"url":"","name":"","company":null,"email":null}
+	,"launch_path": "index.html"
+    ,"appType": "APP"
+	,"installs_allowed_from":null
+	,"default_locale":"en"
+	,"activities": {
+	 "dhis": { "href": "*" }
+	}
+}

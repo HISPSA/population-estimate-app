@@ -17,10 +17,14 @@ export class OptionSetsService {
     options: RequestOptions;
 
 	  constructor(private http:Http) {
-this.headers = new Headers({ 'Content-Type': 'application/json', 'Accept': 'q=0.8;application/json;q=0.9' });
-this.options = new RequestOptions({ headers: this.headers });  }
+      this.headers = new Headers({
+        'Content-Type': 'application/json',
+        'Accept': 'q=0.8;application/json;q=0.9',
+        'Authorization': 'Basic ' + btoa('Elmarie_Claasen_Sup:F@1ryfeet201707')
+      });
+      this.options = new RequestOptions({headers: this.headers});
 
-
+    }
 
   getOptionSetsService(url: string): Promise<any> {
   return this.http

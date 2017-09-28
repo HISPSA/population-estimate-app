@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {Routes, RouterModule }   from '@angular/router';
 
 
 import { FormsModule } from '@angular/forms';
@@ -14,6 +15,12 @@ import { FormPopulationEstimateComponent } from './form-population-estimate/form
 import {DataElementService} from './providers/dataelement.service';
 import {OptionSetsService} from './providers/Option-sets.service';
 import {DatasetService} from './providers/dataset.service';
+import {OrgUnitService} from './providers/orgUnit.service';
+
+const appRoutes: Routes = [
+  { path: 'staging/api/apps/pe/population', component: FormPopulationEstimateComponent }
+];
+
 
 @NgModule({
   declarations: [
@@ -21,9 +28,13 @@ import {DatasetService} from './providers/dataset.service';
     FormPopulationEstimateComponent
   ],
   imports: [
-    BrowserModule, HttpModule
+    BrowserModule, HttpModule, FormsModule,
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true } // <-- debugging purposes only
+    )
   ],
-  providers: [DataElementService,DatasetService ],
+  providers: [DataElementService,DatasetService, OptionSetsService, OrgUnitService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
