@@ -1,0 +1,35 @@
+<div class="container" >
+  <div class="panel panel-primary">
+    <div class="panel-heading">Data Elements</div>
+    <div class="panel-body">
+      <div class="panel panel-default">
+        <div class="panel-heading">Population Dataelements</div>
+
+
+
+        <div>
+          <table class="table">
+            <tr>
+              <th>Dataelement</th>
+
+              <th>Population Factor</th>
+            </tr>
+            <tr *ngFor="let dataelement of dateElements;let i = index">
+              <td>
+                {{dataelement.displayName }}
+              </td>
+
+              <td>  </td>
+            </tr> </table>
+        </div>
+
+    <!--    <ul class="list-group">
+          <li *ngFor="let dataelement of dateElements">
+            {{dataelement.displayName }}
+          </li>
+
+        </ul> -->
+      </div>
+    </div>
+  </div>
+  </div>

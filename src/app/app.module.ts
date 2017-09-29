@@ -16,16 +16,19 @@ import {DataElementService} from './providers/dataelement.service';
 import {OptionSetsService} from './providers/Option-sets.service';
 import {DatasetService} from './providers/dataset.service';
 import {OrgUnitService} from './providers/orgUnit.service';
+import {PopulationSetupFormComponent } from './population-setup-form/population-setup-form.component';
 
 const appRoutes: Routes = [
-  { path: 'staging/api/apps/pe/population', component: FormPopulationEstimateComponent }
+  { path: 'staging/api/apps/pe/pesetup', component: PopulationSetupFormComponent },
+  { path: 'staging/api/apps/pe/pecalculation',  component: FormPopulationEstimateComponent },
 ];
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormPopulationEstimateComponent
+    FormPopulationEstimateComponent,
+    PopulationSetupFormComponent
   ],
   imports: [
     BrowserModule, HttpModule, FormsModule,

@@ -5,42 +5,43 @@
       <label>Name of the Dataset </label>
       <div class="panel panel-default">
         <div class="panel-heading">Population Dataelements</div>
+       <!--
 
         <ul class="list-group">
           <li *ngFor="let dataelement of dateElements">
-            {{ dataelement.name }}
+            {{dataelement.displayName }}
           </li>
 
         </ul>
-        </div>
+        -->
+      </div>
       <div>
         <form  class="form-horizontal" #population = "ngForm">
           <label   >Org Unit Area</label>
-          <select class="form-control" id="orgunitId">
+          <select class="form-control" id="orgunitId" >
             <option value = "">Please select a facility</option>
-            <option *ngFor = "let orgUnit of orgUnitLevel5Orgs" name ="orgUnit"  ngModel>{{orgUnit.name}}</option>
+            <option *ngFor = "let orgUnit of orgUnitLevel5Orgs" name ="orgUnit"  ngModel >{{orgUnit.displayName}}</option>
+          </select>
+          <label   >Re-estimate Org Unit Level</label>
+          <select class="form-control" id="orglevelId">
+            <option value = "">Please select a Org Unit Level</option>
+            <option *ngFor = "let level of organisationUnitLevels" name = "orgLevel" NgModel>{{level.displayName}}</option>
           </select>
 
           <div class="panel panel-default">
             <div class="panel-heading">Date Range</div>
-          <label   >From </label> <input type="Date" class="form-control"  name= "adkMaBHuDha" ngModel required="required"/>
-          <label   >To</label> <input type="Date" class="form-control"  name= "adkMaBHuDha" ngModel required="required"/>
-            </div>
-          <label   >Re-estimate Org Unit Level</label>
-          <select class="form-control" id="orglevelId">
-            <option value = "">Please select a Org Unit Level</option>
-            <option *ngFor = "let level of orgUnitLevel" name = "orgLevel" NgModel>{{level.name}}</option>
-          </select>
-          <input type="text" class="form-control" name= "adkMaBHuDha" ngModel  required="required"/>
-                   <div class="panel panel-default">
+            <label   >From </label> <input type="Date" class="form-control"  name= "adkMaBHuDha" ngModel required="required"/>
+            <label   >To</label> <input type="Date" class="form-control"  name= "adkMaBHuDha" ngModel required="required"/>
+          </div>
+          <div class="panel panel-default">
             <div class="panel-heading">Org-Unit Levels for</div>
             <label   >Population Factors (Routine Data)</label> <input type="text" class="form-control"  name= "adkMaBHuDha" ngModel required="required"/>
             <label   >Source Populations Statistics </label> <input type="text" class="form-control"  name= "adkMaBHuDha" ngModel required="required"/>
           </div>
           <br/>
-          <input class="btn btn-primary"  type="submit" value="Calculation Estimations">
+          <input class="btn btn-primary"  type="submit" value="Calculate Estimations">
         </form>
         <pre>{{population.value | json}}</pre>
+      </div>
     </div>
-  </div>
   </div>
