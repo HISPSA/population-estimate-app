@@ -19,8 +19,8 @@ import {OrgUnitService} from './providers/orgUnit.service';
 import {PopulationSetupFormComponent } from './population-setup-form/population-setup-form.component';
 
 const appRoutes: Routes = [
-  { path: 'staging/api/apps/pe/pesetup', component: PopulationSetupFormComponent },
-  { path: 'staging/api/apps/pe/pecalculation',  component: FormPopulationEstimateComponent },
+  { path: 'pesetup', component: PopulationSetupFormComponent },
+  { path: 'pecalculation',  component: FormPopulationEstimateComponent },
 ];
 
 

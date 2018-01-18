@@ -2,37 +2,104 @@
   <div class="panel panel-primary">
     <div class="panel-heading">Population Estimation</div>
     <div class="panel-body">
-      <label>Name of the Dataset </label>
-      <div class="panel panel-default">
-        <div class="panel-heading">Population Dataelements</div>
-       <!--
 
-        <ul class="list-group">
-          <li *ngFor="let dataelement of dateElements">
-            {{dataelement.displayName }}
-          </li>
-
-        </ul>
-        -->
-      </div>
-      <div>
         <form  class="form-horizontal" #population = "ngForm">
-          <label   >Org Unit Area</label>
-          <select class="form-control" id="orgunitId" >
-            <option value = "">Please select a facility</option>
-            <option *ngFor = "let orgUnit of orgUnitLevel5Orgs" name ="orgUnit"  ngModel >{{orgUnit.displayName}}</option>
+          <label   >Org Unit</label>
+          <select class="form-control" id="orgunitId"  (change) = "onOrgunitSelection($event)" >
+            <option value = "">Select Area</option>
+            <option *ngFor = "let orgUnit of orgUnitLevel5Orgs" [value] = "orgUnit.id"  >{{orgUnit.name}}</option>
           </select>
+
+          <!--
           <label   >Re-estimate Org Unit Level</label>
           <select class="form-control" id="orglevelId">
             <option value = "">Please select a Org Unit Level</option>
             <option *ngFor = "let level of organisationUnitLevels" name = "orgLevel" NgModel>{{level.displayName}}</option>
           </select>
+          -->
 
           <div class="panel panel-default">
-            <div class="panel-heading">Date Range</div>
+            <div class="panel-heading">Period</div>
+          <!--
             <label   >From </label> <input type="Date" class="form-control"  name= "adkMaBHuDha" ngModel required="required"/>
-            <label   >To</label> <input type="Date" class="form-control"  name= "adkMaBHuDha" ngModel required="required"/>
+            <label>Select a Period</label> <input type="Date" class="form-control"  name= "adkMaBHuDha" ngModel required="required"/> -->
+
+            <label>Select a Period</label> <input type="Date" class="form-control"  name= "adkMaBHuDha" ngModel required="required"/>
+
+            <select class="form-control" id="orgunitId"    >
+              <option value = "">Select a Period</option>
+             <!-- <option *ngFor = "let orgUnit of orgUnitLevel5Orgs" [value] = "orgUnit.id"  >{{orgUnit.name}}</option> -->
+            </select>
           </div>
+
+
+          <div class="panel panel-default">
+            <div class="panel-heading">Dataelements use in Population estimates </div>
+
+
+            <div *ngIf = "populationdataLoaded">
+
+              <div class="row">
+                <div class="col-sm-8">Data Element</div>
+                <div class="col-sm-4">Value</div>
+              </div>
+
+
+              <div class="row" *ngFor = "let de of CurrentpopulationEstimates; let i = index">
+                <div class="col-sm-8">{{de.dataElement}}</div>
+                <!--  <div class="col-sm-3">{{appl.created}}</div>-->
+                <div class="col-sm-4">{{de.value}}</div>
+                </div>
+            </div>
+<!--
+            <ul class="list-group">
+              <li *ngFor="let dataelement of populationEstimateDataElements">
+                {{dataelement.displayName }}
+              </li>
+
+            </ul>
+
+            -->
+
+          </div>
+
+
+          <div class="panel panel-default">
+            <div class="panel-heading">Dataelements used in PHC Headcount</div>
+
+
+            <ul class="list-group">
+              <li *ngFor="let dephc of phcHeadcountDataElements">
+                {{dephc.name }}
+              </li>
+
+            </ul>
+
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+          <div class="panel panel-default">
+            <div class="panel-heading">Proportional Population contributions</div>
+            <!--
+
+             <ul class="list-group">
+               <li *ngFor="let dataelement of dateElements">
+                 {{dataelement.displayName }}
+               </li>
+
+             </ul>
+             -->
+          </div>
+
           <div class="panel panel-default">
             <div class="panel-heading">Org-Unit Levels for</div>
             <label   >Population Factors (Routine Data)</label> <input type="text" class="form-control"  name= "adkMaBHuDha" ngModel required="required"/>

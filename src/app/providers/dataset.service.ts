@@ -14,7 +14,7 @@ export class DatasetService {
     options: RequestOptions;
 
 	  constructor(private http:Http) {
-      this.headers = new Headers({ 'Content-Type': 'application/json', 'Accept': 'q=0.8;application/json;q=0.9', 'Authorization' : 'Basic ' + btoa('Elmarie_Claasen_Sup:F@1ryfeet201707')});
+      this.headers = new Headers({ 'Content-Type': 'application/json', 'Accept': 'q=0.8;application/json;q=0.9', 'Authorization' : 'Basic ' + btoa('Comfort_Mankga_SWD:Mathematics315@')});
 this.options = new RequestOptions({ headers: this.headers });  }
 
 

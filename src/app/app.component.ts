@@ -30,11 +30,11 @@ export class AppComponent {
   ngOnInit() {
 
     console.log("Boki Boki");
-    const dataelementUrl ='../../../training/api/dataElements.json?filter=dataElementGroups.id:in:[qWfLGQkNhLB]&paging=false';
-    const dataSetsUrl = '../../../training/api/dataSets.json?paging=false&fields=id, name&filter=id:eq:L2hwAPHJyTd&paging=false';
+    const dataelementUrl ='http://localhost:8085/dhis/api/dataElements.json?filter=dataElementGroups.id:in:[qWfLGQkNhLB]&paging=false';
+    const dataSetsUrl = 'http://localhost:8085/dhis/api/dataSets.json?paging=false&fields=id, name&filter=id:eq:L2hwAPHJyTd&paging=false';
     //const orgUnitLevelUrl = '../../training/api/organisationUnitLevels.json';
-    const orgUnitLevel5Orgsurl = '../../../training/api/organisationUnits.json?paging=false&filter=level:eq:4'
-    const orgUnitLevelUrl = '../../../training/api/organisationUnitLevels.json?paging=false'
+    const orgUnitLevel5Orgsurl = 'http://localhost:8085/dhis/api/organisationUnits.json?paging=false&filter=level:eq:4'
+    const orgUnitLevelUrl = 'http://localhost:8085/dhis/api/organisationUnitLevels.json?paging=false'
 
     this.orgUnitService.getOrgUnitsService(orgUnitLevel5Orgsurl).then(result => console.log(result)
     ).catch(error => console.log(error));
