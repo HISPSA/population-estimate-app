@@ -21,13 +21,18 @@ export class FormPopulationEstimateComponent {
   private datasets: any;
   private dateElements: any;
 
+
+
   OrgUnitArea: string=""
   OrgUnitLevel: string=""
   DateRangeStart: string= ""
   DateRangeEnd: string = ""
   order: string = "name";
 
-  CurrentpopulationEstimates: any;
+  CurrentpopulationEstimates: any[];
+
+
+   populationEstimatesDatavalues: dataValues[];
 
   populationdataLoaded: boolean;
 
@@ -41,6 +46,7 @@ export class FormPopulationEstimateComponent {
     this.dateElements = [];
 
     this.CurrentpopulationEstimates = [];
+    this.populationEstimatesDatavalues = [];
 
 
 
@@ -87,23 +93,33 @@ export class FormPopulationEstimateComponent {
     */
 
   }
-
-
-
-
   onOrgunitSelection($event){
-
+    this.populationEstimatesDatavalues = [];
 
 let  populationEstimatesValues = 'http://localhost:8085/dhis/api/dataValueSets.json?dataSet=L2hwAPHJyTd&period=2016&orgUnit='+ $event.target.value;
-
-    console.log('Organisation name is '+  $event.target.value)
-
+    console.log('Organisation name is '+  $event.target.value);
     this.dataElementService.getDataelementsService(populationEstimatesValues).then(result => {this.CurrentpopulationEstimates =  result.dataValues
       console.log(result);
-
       this.populationdataLoaded = true;
+      for (let pop of  this.CurrentpopulationEstimates)
+      {
+        let dataElementName: string='';
+        let populaestimateLine= new dataValues();
 
+        let DataElementUrl = 'http://localhost:8085/dhis/api/dataElements.json?paging=false&filter=id:eq:'+pop.dataElement;
 
+        this.dataElementService.getDataelementsService(DataElementUrl).then(result => {dataElementName =  result.dataElements[0].name
+
+          populaestimateLine.dataElement = dataElementName;
+          populaestimateLine.value = pop.value;
+          populaestimateLine.dataSet = pop.dataSet;
+          populaestimateLine.orgUnit = pop.orgUnit;
+          populaestimateLine.period  = pop.period;
+          populaestimateLine.uid = pop.dataElement
+          this.populationEstimatesDatavalues.push(populaestimateLine);
+
+        }).catch(error => console.log(error));
+      }
     }).catch(error => console.log(error));
   }
 

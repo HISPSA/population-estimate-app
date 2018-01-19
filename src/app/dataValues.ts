@@ -14,4 +14,5 @@ export class dataValues{
   lastUpdated:string;
   comment:string;
   followUp: boolean;
+  uid:string;
 }

@@ -26,10 +26,12 @@
 
             <label>Select a Period</label> <input type="Date" class="form-control"  name= "adkMaBHuDha" ngModel required="required"/>
 
+            <!--
             <select class="form-control" id="orgunitId"    >
               <option value = "">Select a Period</option>
-             <!-- <option *ngFor = "let orgUnit of orgUnitLevel5Orgs" [value] = "orgUnit.id"  >{{orgUnit.name}}</option> -->
+             <!-- <option *ngFor = "let orgUnit of orgUnitLevel5Orgs" [value] = "orgUnit.id"  >{{orgUnit.name}}</option>
             </select>
+            -->
           </div>
 
 
@@ -45,7 +47,7 @@
               </div>
 
 
-              <div class="row" *ngFor = "let de of CurrentpopulationEstimates; let i = index">
+              <div class="row" *ngFor = "let de of populationEstimatesDatavalues; let i = index">
                 <div class="col-sm-8">{{de.dataElement}}</div>
                 <!--  <div class="col-sm-3">{{appl.created}}</div>-->
                 <div class="col-sm-4">{{de.value}}</div>

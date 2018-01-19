@@ -3,6 +3,7 @@
  */
 import {dataValues} from "./dataValues";
 export class ClassPopulation {
+
   period: string;
   dataelement: string;
   datavalue: number;
