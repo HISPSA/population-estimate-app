@@ -48,10 +48,10 @@ headcountDataLoaded: boolean;
   private PHCHeadcountTotalHierachy: PHCHeadcount;
  private TotalHeadCountTotal: number=0;
 
-  private pqkbzu3K48GMonthlyHeadCountTotal: number=0;
-  private EnwfwzfrdQ7MonthlyHeadCountTotal: number=0;
-  private B5g5X2k5Q8kMonthlyHeadCountTotal: number=0;
-  private IovfSP4TNjFMonthlyHeadCountTotal: number=0;
+   pqkbzu3K48GMonthlyHeadCountTotal: number;
+  EnwfwzfrdQ7MonthlyHeadCountTotal: number;
+  B5g5X2k5Q8kMonthlyHeadCountTotal: number;
+   IovfSP4TNjFMonthlyHeadCountTotal: number;
 
 
 
@@ -204,9 +204,6 @@ let  populationEstimatesValues = 'http://localhost:8085/dhis/api/dataValueSets.j
 
                   if (phcHeadCount.dataElement == dataElements.id){
 
-
-
-
                     if (phcHeadCount.dataElement == 'pqkbzu3K48G'){
                       if (!isNaN( Number(phcHeadCount.value))){
                         if (this.pqkbzu3K48GMonthlyHeadCountTotal==0){
@@ -236,7 +233,6 @@ let  populationEstimatesValues = 'http://localhost:8085/dhis/api/dataValueSets.j
 
 
                     }else if (phcHeadCount.dataElement == 'B5g5X2k5Q8k'){
-
 
                       if (!isNaN( Number(phcHeadCount.value))){
                         if (this.B5g5X2k5Q8kMonthlyHeadCountTotal==0){
