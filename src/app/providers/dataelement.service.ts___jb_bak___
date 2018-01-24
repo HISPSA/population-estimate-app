@@ -17,8 +17,6 @@ export class DataElementService {
       this.headers = new Headers({ 'Content-Type': 'application/json', 'Accept': 'q=0.8;application/json;q=0.9', 'Authorization' : 'Basic ' + btoa('Comfort_Mankga_SWD:Mathematics315@')});
 this.options = new RequestOptions({ headers: this.headers });  }
 
-
-
  getDataelementsService(url: string): Promise<any> {
   return this.http
       .get(url,this.options)
@@ -27,12 +25,7 @@ this.options = new RequestOptions({ headers: this.headers });  }
       .catch(this.handleError);
   }
 
-  
-
-
-
-
-
+    
   private extractData(res: Response) {
     let body = res.json();
     return body || {};
