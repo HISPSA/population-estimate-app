@@ -66,13 +66,13 @@
           </div>
 
 
-          <div class="panel panel-default">
+          <div   *ngIf="headcountDataLoaded" class="panel panel-default">
             <div class="panel-heading">Dataelements used in PHC Headcount</div>
 
 
             <ul class="list-group">
-              <li *ngFor="let dephc of phcHeadcountDataElements">
-                {{dephc.name }}
+              <li *ngFor="let dephc of PHCHeadcountColection">
+                {{dephc.dataElement }}
               </li>
 
             </ul>

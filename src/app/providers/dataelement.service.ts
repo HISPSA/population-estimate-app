@@ -18,23 +18,46 @@ export class DataElementService {
 this.options = new RequestOptions({ headers: this.headers });  }
 
 
-
-  getDataelementsService(url: string): Promise<any> {
+/*
+ getDataelementsService(url: string): Promise<any> {
   return this.http
-      .get(url, this.options)
+      .get(url,this.options)
       .toPromise()
       .then(this.extractData)
       .catch(this.handleError);
   }
 
+  */
+
+
+  getDataelementsService(url: string): Promise<any> {
+
+
+    try{}
+    catch{
+
+    }
+
+    return this.http
+      .get(url,this.options)
+      .toPromise()
+      .then(this.extractData)
+      .catch(this.handleError);
+  }
+
+
+
+
+
   private extractData(res: Response) {
-        let body = res.json();
-        return body || {};
-    }
+    let body = res.json();
+    return body || {};
+  }
+
+  private handleError(error: any): Promise<any> {
+    console.error('An error occurred', error);
+    return Promise.reject(error.message || error);
+  }
 
 
-    private handleError(error: any): Promise<any> {
-        console.error('An error occurred', error);
-        return Promise.reject(error.message || error);
-    }
 }

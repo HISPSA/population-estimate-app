@@ -24,10 +24,7 @@ export class FormPopulationEstimateComponent {
 
   private phcHeadCount: any;
   private PHCHeadcountColection: PHCHeadcount[];
-
   private PHCHeadcountObject: PHCHeadcount;
-
-
 
 
   OrgUnitArea: string=""
@@ -36,37 +33,43 @@ export class FormPopulationEstimateComponent {
   DateRangeEnd: string = ""
   order: string = "name";
 
-  CurrentpopulationEstimates: any[];
-
-
+   CurrentpopulationEstimates: any[];
    populationEstimatesDatavalues: dataValues[];
    MonthlyPHCHeadCounntTotalsDatavalues: any;
-
   populationdataLoaded: boolean;
+
+
+headcountDataLoaded: boolean;
+
+  orgunitHierachyChildren: any;
+
+
+  private PHCHeadcountTotalHierachyCollection: PHCHeadcount[];
+  private PHCHeadcountTotalHierachy: PHCHeadcount;
+
 
   constructor(private orgUnitService: OrgUnitService, private dataElementService:DataElementService, private datasetService: DatasetService) {
     this.populationEstimateDataElements = [];
     this.phcHeadcountDataElements =[];
-
     this.organisationUnitLevels = [];
     this.datasets = [];
     this.orgUnitLevel5Orgs = [];
     this.dateElements = [];
-
     this.phcHeadcountDataElements = [];
-
     this.CurrentpopulationEstimates = [];
     this.populationEstimatesDatavalues = [];
-
     this.MonthlyPHCHeadCounntTotalsDatavalues = [];
     this.PHCHeadcountColection =  [];
     this.PHCHeadcountObject  = new PHCHeadcount();
+    this.orgunitHierachyChildren = [];
+    this.PHCHeadcountTotalHierachy = new PHCHeadcount();
+    this.PHCHeadcountTotalHierachyCollection = [];
 
   }
   ngOnInit() {
     console.log("Boki Boki");
     const populationdataelementUrl ='http://localhost:8085/dhis/api/dataElements.json?filter=dataElementGroups.id:in:[Wi2PeVJPnpI]&paging=false&fields=*&paging=false';
-   const phcHeadcountDataElementsUrl = 'http://localhost:8085/dhis/api/dataElements.json?filter=id:in:[B5g5X2k5Q8k,EnwfwzfrdQ7,IovfSP4TNjF,pqkbzu3K48G]&paging=false';
+    const phcHeadcountDataElementsUrl = 'http://localhost:8085/dhis/api/dataElements.json?filter=id:in:[B5g5X2k5Q8k,EnwfwzfrdQ7,IovfSP4TNjF,pqkbzu3K48G]&paging=false';
 
     const dataSetsUrl = 'http://localhost:8085/dhis/api/dataSets.json?paging=false&fields=id, name&filter=id:eq:L2hwAPHJyTd&paging=false';
     //const orgUnitLevelUrl = '../../training/api/organisationUnitLevels.json';
@@ -115,10 +118,11 @@ let  populationEstimatesValues = 'http://localhost:8085/dhis/api/dataValueSets.j
     let phcHeadcountDataElementsUrl = 'http://localhost:8085/dhis/api/dataElements.json?filter=id:in:[B5g5X2k5Q8k,EnwfwzfrdQ7,IovfSP4TNjF,pqkbzu3K48G,C6y6Q2v7L0i]&paging=false';
 
     //use the URL to get children in given the parent Id
-    let OrgunitHierachy  = 'http://localhost:8085/dhis/api/organisationUnits.json?filter=parent.id:eq:BCpKOPuBh8C&paging=false'
 
-
+    let OrgunitHierachyUrl  = 'http://localhost:8085/dhis/api/organisationUnits.json?paging=false&filter=parent.id:eq:'+ $event.target.value
     console.log('Organisation name is '+  $event.target.value);
+
+
     this.dataElementService.getDataelementsService(populationEstimatesValues).then(result => {this.CurrentpopulationEstimates =  result.dataValues
       console.log(result);
       this.populationdataLoaded = true;
@@ -141,7 +145,9 @@ let  populationEstimatesValues = 'http://localhost:8085/dhis/api/dataValueSets.j
 
         }).catch(error => console.log(error));
       }
+
       this.phcHeadcountDataElements = [];
+
       //Get population Headcount
       this.dataElementService.getDataelementsService(phcHeadcountDataElementsUrl).then(result => {
         this.phcHeadcountDataElements =  result.dataElements
@@ -152,46 +158,75 @@ let  populationEstimatesValues = 'http://localhost:8085/dhis/api/dataValueSets.j
         for (let dataElements of  this.phcHeadcountDataElements)
         {
         //  console.log("ffffffffffffffffffffffffffffffffffffffffffffffffff"+dataElements.id)
-          let yearlyHeadCountTotal: number=0;
+          let MonthlyHeadCountTotal: number=0;
           this.PHCHeadcountObject  = new PHCHeadcount();
           this.PHCHeadcountObject.totalHeadcountdatavalue = 0;
+          this.dataElementService.getDataelementsService(OrgunitHierachyUrl).then(result => {this.orgunitHierachyChildren =  result.organisationUnits
 
-          this.dataElementService.getDataelementsService(MonthlyPHCHeadcount).then(result => { this.MonthlyPHCHeadCounntTotalsDatavalues =  result.dataValues
-            //  console.log(result)
-            for (let phcHeadCount of  this.MonthlyPHCHeadCounntTotalsDatavalues )
+            console.log(result)
+
+            this.PHCHeadcountTotalHierachy = new PHCHeadcount();
+            this.PHCHeadcountTotalHierachyCollection = [];
+
+            let OrgLevelTotal = 0;
+            this.PHCHeadcountObject.dataElement = dataElements.id;
+            this.PHCHeadcountObject.dataSet = 'Ux8RWIJyIk3'
+            this.PHCHeadcountObject.period = '201712'
+
+
+           let index = 0
+
+            for (let orgHierachy of  this.orgunitHierachyChildren)
             {
-              this.PHCHeadcountObject.dataElement = ""
-              this.PHCHeadcountObject.period = ""
-              this.PHCHeadcountObject.dataSet = ""
-              this.PHCHeadcountObject.orgUnit = ""
-              if (phcHeadCount.dataElement == dataElements.id){
 
-                console.log(phcHeadCount.value)
-                if (!isNaN( Number(phcHeadCount.value))){
+//let lengthA= this.orgunitHierachyChildren.length;
+         //   alert(lengthA)
+             // console.log('Length..............................'+lengthA.toString())
+             // index = index +1;
 
-                  if (yearlyHeadCountTotal==0){
-                    yearlyHeadCountTotal= Number(phcHeadCount.value)
+           //   alert(index)
 
-                  }else
-                  {
-                    yearlyHeadCountTotal=yearlyHeadCountTotal+Number(phcHeadCount.value)           }
+              MonthlyPHCHeadcount = 'http://localhost:8085/dhis/api/dataValueSets.json?dataSet=Ux8RWIJyIk3&period=201712&orgUnit='+orgHierachy.id
+              this.dataElementService.getDataelementsService(MonthlyPHCHeadcount).then( result => { this.MonthlyPHCHeadCounntTotalsDatavalues =  result.dataValues
+                //  console.log(result)
+                for (let phcHeadCount of  this.MonthlyPHCHeadCounntTotalsDatavalues )
+                {
 
-                  this.PHCHeadcountObject.totalHeadcountdatavalue = yearlyHeadCountTotal;
-                  this.PHCHeadcountObject.dataElement = phcHeadCount.dataElement
-                  this.PHCHeadcountObject.period = phcHeadCount.period
-                  this.PHCHeadcountObject.dataSet = result.dataSet
-                  this.PHCHeadcountObject.orgUnit = phcHeadCount.orgUnit
-                  console.log("I am In")
-                  console.log("Total :"+this.PHCHeadcountObject.totalHeadcountdatavalue)
+
+                  if (phcHeadCount.dataElement == dataElements.id){
+                    console.log(phcHeadCount.value)
+                    if (!isNaN( Number(phcHeadCount.value))){
+
+                      if (MonthlyHeadCountTotal==0){
+                        MonthlyHeadCountTotal= Number(phcHeadCount.value)
+
+                      }else
+                      {
+                        MonthlyHeadCountTotal=MonthlyHeadCountTotal+Number(phcHeadCount.value)  ;
+                      }
+
+
+        /*              if (lengthA==index){
+                        this.PHCHeadcountObject.totalHeadcountdatavalue = MonthlyHeadCountTotal
+                        this.PHCHeadcountColection.push(this.PHCHeadcountObject);
+                        this.headcountDataLoaded = true;
+                        alert(MonthlyHeadCountTotal)
+                      }
+                      */
+
+
+                   //   console.log(" this.PHCHeadcountColection :"+ this.PHCHeadcountColection.length)
+                      console.log("Total :"+MonthlyHeadCountTotal)
+                    }
+                  }
                 }
-              }
+              }).catch(error => console.log(error));
             }
-            this.PHCHeadcountColection.push(this.PHCHeadcountObject)
           }).catch(error => console.log(error));
+
+
         }
       }).catch(error => console.log(error));
-
-
     }).catch(error => console.log(error));
   }
   GetPopulationtotalstasaa(){
