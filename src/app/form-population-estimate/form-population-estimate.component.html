@@ -65,24 +65,23 @@
 
           </div>
 
-
-          <div   *ngIf="headcountDataLoaded" class="panel panel-default">
-            <div class="panel-heading">Dataelements used in PHC Headcount</div>
-
-
-            <ul class="list-group">
-              <li *ngFor="let dephc of PHCHeadcountColection">
-                {{dephc.dataElement }}
-              </li>
-
-            </ul>
-
-          </div>
+          <div class="panel panel-default">
+          <div class="panel-heading">Dataelements used in PHC Headcount</div>
+          <div   *ngIf="headcountDataLoaded" >
 
 
 
+            <div class="row" *ngFor="let dephc of PHCHeadcountColection">
+              <div class="col-sm-8">{{dephc.dataElement}}</div>
+              <!--  <div class="col-sm-3">{{appl.created}}</div>-->
+              <div class="col-sm-4">{{dephc.totalHeadcountdatavalue}}</div>
+            </div>
+                 </div>
+</div>
 
 
+
+<label>{{TotalHeadCountTotal}}</label>
 
 
 
