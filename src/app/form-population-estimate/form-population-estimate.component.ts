@@ -185,7 +185,7 @@ headcountDataLoaded: boolean;
 
     const dataSetsUrl = 'http://localhost:8085/dhis/api/dataSets.json?paging=false&fields=id, name&filter=id:eq:L2hwAPHJyTd&paging=false';
     //const orgUnitLevelUrl = '../../training/api/organisationUnitLevels.json';
-    const orgUnitLevel5Orgsurl = 'http://localhost:8085/dhis/api/organisationUnits.json?paging=false&filter=level:in:[4,5]';
+    const orgUnitLevel5Orgsurl = 'http://localhost:8085/dhis/api/organisationUnits.json?paging=false&filter=level:in:[4,5]&fields=[code,lastUpdated,created,name,id,href]';
     const orgUnitLevelUrl = 'http://localhost:8085/dhis/api/organisationUnitLevels.json?paging=false';
 
 
@@ -308,7 +308,7 @@ let  populationEstimatesValues = 'http://localhost:8085/dhis/api/dataValueSets.j
            //     alert(this.periodCollection);
               }
 
-              
+
 
 
               MonthlyPHCHeadcount = 'http://localhost:8085/dhis/api/dataValueSets.json?dataSet=Ux8RWIJyIk3&period=201712&orgUnit='+orgHierachy.id
