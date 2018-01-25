@@ -1,4 +1,4 @@
-import {Component, OnInit } from '@angular/core';
+import {Component, OnInit ,Input, OnChanges, SimpleChanges} from '@angular/core';
 import {OrgUnitService} from '../providers/orgUnit.service';
 import {DataElementService} from '../providers/dataelement.service';
 import {DatasetService} from '../providers/dataset.service';
@@ -48,13 +48,22 @@ headcountDataLoaded: boolean;
   private PHCHeadcountTotalHierachy: PHCHeadcount;
  private TotalHeadCountTotal: number=0;
 
-   pqkbzu3K48GMonthlyHeadCountTotal: number;
-  EnwfwzfrdQ7MonthlyHeadCountTotal: number;
-  B5g5X2k5Q8kMonthlyHeadCountTotal: number;
-   IovfSP4TNjFMonthlyHeadCountTotal: number;
+  pqkbzu3K48GMonthlyHeadCountTotal: number=0;
+  EnwfwzfrdQ7MonthlyHeadCountTotal: number=0;
+  B5g5X2k5Q8kMonthlyHeadCountTotal: number=0;
+  IovfSP4TNjFMonthlyHeadCountTotal: number=0;
+
+  pqkbzu3K48under5years: string ="";
+  EnwfwzfrdQ7G59years:string="";
+  B5g5X2k5Q8kG1019years:string="";
+  IovfSP4TNjFG20yearsandolder:string=""
 
 
 
+  pqkbzu3K48under5yearsphcPercentageContribution: number=0;
+  EnwfwzfrdQ7G59yearsphcPercentageContribution: number=0;
+  B5g5X2k5Q8kG1019yearsphcPercentageContribution: number=0;
+  IovfSP4TNjFG20yearsandolderphcPercentageContribution: number=0;
 
 
 
@@ -74,6 +83,8 @@ headcountDataLoaded: boolean;
     this.orgunitHierachyChildren = [];
     this.PHCHeadcountTotalHierachy = new PHCHeadcount();
     this.PHCHeadcountTotalHierachyCollection = [];
+
+    this.pqkbzu3K48GMonthlyHeadCountTotal = 0;
 
   }
   ngOnInit() {
@@ -119,6 +130,17 @@ headcountDataLoaded: boolean;
 
   }
   onOrgunitSelection($event){
+    this.TotalHeadCountTotal=0;
+    this.pqkbzu3K48GMonthlyHeadCountTotal=0;
+    this.EnwfwzfrdQ7MonthlyHeadCountTotal=0;
+    this.B5g5X2k5Q8kMonthlyHeadCountTotal=0;
+    this.IovfSP4TNjFMonthlyHeadCountTotal=0;
+
+    this.pqkbzu3K48under5yearsphcPercentageContribution=0;
+    this.EnwfwzfrdQ7G59yearsphcPercentageContribution=0;
+    this.B5g5X2k5Q8kG1019yearsphcPercentageContribution=0;
+    this.IovfSP4TNjFG20yearsandolderphcPercentageContribution=0;
+
     this.populationEstimatesDatavalues = [];
     this.phcHeadcountDataElements = [];
 
@@ -157,12 +179,7 @@ let  populationEstimatesValues = 'http://localhost:8085/dhis/api/dataValueSets.j
       }
 
       this.phcHeadcountDataElements = [];
-      this.TotalHeadCountTotal = 0;
-
-
-
-
-
+     // this.TotalHeadCountTotal = 0;
       //Get population Headcount
       this.dataElementService.getDataelementsService(phcHeadcountDataElementsUrl).then(result => {
         this.phcHeadcountDataElements =  result.dataElements
@@ -176,7 +193,7 @@ let  populationEstimatesValues = 'http://localhost:8085/dhis/api/dataValueSets.j
 
          // this.pqkbzu3K48GMonthlyHeadCountTotal = 0;
 
-          this.PHCHeadcountObject.totalHeadcountdatavalue = 0;
+         // this.PHCHeadcountObject.totalHeadcountdatavalue = 0;
           this.dataElementService.getDataelementsService(OrgunitHierachyUrl).then(result => {this.orgunitHierachyChildren =  result.organisationUnits
           let OrgLevelTotal = 0;
            let index = 0
@@ -195,12 +212,6 @@ let  populationEstimatesValues = 'http://localhost:8085/dhis/api/dataValueSets.j
                 //  console.log(result)
                 for (let phcHeadCount of  this.MonthlyPHCHeadCounntTotalsDatavalues )
                 {
-                  if (!isNaN( Number(phcHeadCount.value))){
-                    this.TotalHeadCountTotal = this.TotalHeadCountTotal+Number(phcHeadCount.value);
-                  }
-
-
-
 
                   if (phcHeadCount.dataElement == dataElements.id){
 
@@ -208,13 +219,24 @@ let  populationEstimatesValues = 'http://localhost:8085/dhis/api/dataValueSets.j
                       if (!isNaN( Number(phcHeadCount.value))){
                         if (this.pqkbzu3K48GMonthlyHeadCountTotal==0){
                           this.pqkbzu3K48GMonthlyHeadCountTotal= Number(phcHeadCount.value)
+
+                          this.TotalHeadCountTotal = this.TotalHeadCountTotal+ Number(phcHeadCount.value);
+                          this.pqkbzu3K48under5years = dataElements.dataElement;
                         }else
                         {
                           this.pqkbzu3K48GMonthlyHeadCountTotal=this.pqkbzu3K48GMonthlyHeadCountTotal+Number(phcHeadCount.value);
+                          this.TotalHeadCountTotal = this.TotalHeadCountTotal+ Number(phcHeadCount.value);
+
+                          this.pqkbzu3K48under5yearsphcPercentageContribution = (this.pqkbzu3K48GMonthlyHeadCountTotal+Number(phcHeadCount.value))/(this.TotalHeadCountTotal+ Number(phcHeadCount.value))
+
+
+                          this.pqkbzu3K48under5years = dataElements.dataElement;
+
                           // this.PHCHeadcountObject.totalHeadcountdatavalue = this.pqkbzu3K48GMonthlyHeadCountTotal;
                         }
                         console.log("Total : pqkbzu3K48G:       "+this.pqkbzu3K48GMonthlyHeadCountTotal)
                       }
+
 
 
                     }else if (phcHeadCount.dataElement == 'EnwfwzfrdQ7')
@@ -223,13 +245,29 @@ let  populationEstimatesValues = 'http://localhost:8085/dhis/api/dataValueSets.j
                       if (!isNaN( Number(phcHeadCount.value))){
                         if (this.EnwfwzfrdQ7MonthlyHeadCountTotal==0){
                           this.EnwfwzfrdQ7MonthlyHeadCountTotal= Number(phcHeadCount.value)
+
+                          this.TotalHeadCountTotal = this.TotalHeadCountTotal+ Number(phcHeadCount.value);
+
+                          this.EnwfwzfrdQ7G59yearsphcPercentageContribution = this.EnwfwzfrdQ7MonthlyHeadCountTotal/this.TotalHeadCountTotal
                         }else
                         {
                           this.EnwfwzfrdQ7MonthlyHeadCountTotal=this.EnwfwzfrdQ7MonthlyHeadCountTotal+Number(phcHeadCount.value);
                           // this.PHCHeadcountObject.totalHeadcountdatavalue = this.pqkbzu3K48GMonthlyHeadCountTotal;
+
+                          this.TotalHeadCountTotal = this.TotalHeadCountTotal+ Number(phcHeadCount.value);
+
+                          if(this.TotalHeadCountTotal > 0)
+
+                          {
+                            this.EnwfwzfrdQ7G59yearsphcPercentageContribution = this.EnwfwzfrdQ7MonthlyHeadCountTotal/this.TotalHeadCountTotal
+                          }
                         }
                         console.log("Total : EnwfwzfrdQ7:    "+this.EnwfwzfrdQ7MonthlyHeadCountTotal)
+
+                        this.EnwfwzfrdQ7G59years = dataElements.name;
                       }
+
+
 
 
                     }else if (phcHeadCount.dataElement == 'B5g5X2k5Q8k'){
@@ -237,13 +275,26 @@ let  populationEstimatesValues = 'http://localhost:8085/dhis/api/dataValueSets.j
                       if (!isNaN( Number(phcHeadCount.value))){
                         if (this.B5g5X2k5Q8kMonthlyHeadCountTotal==0){
                           this.B5g5X2k5Q8kMonthlyHeadCountTotal= Number(phcHeadCount.value)
+
+                          this.TotalHeadCountTotal = this.TotalHeadCountTotal+ Number(phcHeadCount.value);
                         }else
                         {
                           this.B5g5X2k5Q8kMonthlyHeadCountTotal=this.B5g5X2k5Q8kMonthlyHeadCountTotal+Number(phcHeadCount.value);
                           // this.PHCHeadcountObject.totalHeadcountdatavalue = this.pqkbzu3K48GMonthlyHeadCountTotal;
+
+                          this.TotalHeadCountTotal = this.TotalHeadCountTotal+ Number(phcHeadCount.value);
+
+
+                          if(this.TotalHeadCountTotal > 0)
+
+                          {
+                            this.B5g5X2k5Q8kG1019yearsphcPercentageContribution = this.B5g5X2k5Q8kMonthlyHeadCountTotal/this.TotalHeadCountTotal
+                          }
                         }
                         console.log("Total : B5g5X2k5Q8k:        "+this.B5g5X2k5Q8kMonthlyHeadCountTotal)
                       }
+
+                      this.B5g5X2k5Q8kG1019years = phcHeadCount.dataElement;
 
                     }else if (phcHeadCount.dataElement == 'IovfSP4TNjF')
                     {
@@ -251,17 +302,26 @@ let  populationEstimatesValues = 'http://localhost:8085/dhis/api/dataValueSets.j
                       if (!isNaN( Number(phcHeadCount.value))){
                         if (this.IovfSP4TNjFMonthlyHeadCountTotal==0){
                           this.IovfSP4TNjFMonthlyHeadCountTotal= Number(phcHeadCount.value)
+
+                          this.TotalHeadCountTotal = this.TotalHeadCountTotal+ Number(phcHeadCount.value);
                         }else
                         {
                           this.IovfSP4TNjFMonthlyHeadCountTotal=this.IovfSP4TNjFMonthlyHeadCountTotal+Number(phcHeadCount.value);
                           // this.PHCHeadcountObject.totalHeadcountdatavalue = this.pqkbzu3K48GMonthlyHeadCountTotal;
+                          this.TotalHeadCountTotal = this.TotalHeadCountTotal+Number(phcHeadCount.value);
+
+                          if(this.TotalHeadCountTotal > 0)
+
+                          {
+                            this.IovfSP4TNjFG20yearsandolderphcPercentageContribution = (this.IovfSP4TNjFMonthlyHeadCountTotal+Number(phcHeadCount.value))/(this.TotalHeadCountTotal+Number(phcHeadCount.value))
+                          }
+
                         }
                         console.log("Total : IovfSP4TNjF:    "+this.IovfSP4TNjFMonthlyHeadCountTotal)
                       }
+
+                      this.IovfSP4TNjFG20yearsandolder = phcHeadCount.dataElement;
                     }
-
-
-
                   //  alert(phcHeadCount.dataElement)
                     //alert(dataElements.id)
 
@@ -270,15 +330,16 @@ let  populationEstimatesValues = 'http://localhost:8085/dhis/api/dataValueSets.j
               }).catch(error => console.log(error));
             }
 
-
+       /*
             if (dataElements.id == 'pqkbzu3K48G'){
               this.PHCHeadcountObject = new PHCHeadcount();
               this.PHCHeadcountObject.dataElement = dataElements.name;
               this.PHCHeadcountObject.dataSet = 'Ux8RWIJyIk3';
               this.PHCHeadcountObject.period ='201212';
+              this.PHCHeadcountObject.uid = dataElements.id
               this.PHCHeadcountObject.totalHeadcountdatavalue  = this.pqkbzu3K48GMonthlyHeadCountTotal;
 
-              console.log('I am In')
+              console.log('I am In    '+Number(this.pqkbzu3K48GMonthlyHeadCountTotal))
 
               this.headcountDataLoaded = true;
               this.PHCHeadcountColection.push(this.PHCHeadcountObject);
@@ -314,6 +375,10 @@ let  populationEstimatesValues = 'http://localhost:8085/dhis/api/dataValueSets.j
               this.headcountDataLoaded = true;
               this.PHCHeadcountColection.push(this.PHCHeadcountObject);
             }
+
+            */
+
+
             console.log(this.PHCHeadcountColection)
           }).catch(error => console.log(error));
         }
@@ -321,9 +386,31 @@ let  populationEstimatesValues = 'http://localhost:8085/dhis/api/dataValueSets.j
         console.log("Total Headcount:   " + this.TotalHeadCountTotal)
       }).catch(error => console.log(error));
     }).catch(error => console.log(error));
+
+
+/*
+    for (var i in  this.PHCHeadcountColection) {
+      if (i.uid == 'EnwfwzfrdQ7') {
+        i.totalHeadcountdatavalue = this.pqkbzu3K48GMonthlyHeadCountTotal;
+      }
+    }
+*/
   }
   GetPopulationtotalstasaa(){
   }
+
+  onchange($event) {
+
+
+      alert('hhhhhhhhhhhhh')
+
+
+  }
+
+
+
+
+
 
   GetTotalHeadCount(){  }
 

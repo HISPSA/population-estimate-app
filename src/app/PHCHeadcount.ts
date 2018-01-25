@@ -15,4 +15,5 @@ export class PHCHeadcount {
   comment:string;
   followUp: boolean;
   uid:string;
+  phcPercentageContribution: number
 }

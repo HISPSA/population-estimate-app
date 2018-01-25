@@ -65,29 +65,67 @@
 
           </div>
 
-          <div class="panel panel-default">
-          <div class="panel-heading">Dataelements used in PHC Headcount</div>
-          <div   *ngIf="headcountDataLoaded" >
+          <div class="panel panel-default"   *ngIf = "TotalHeadCountTotal">
+          <div class="panel-heading">PHC Headcount</div>
 
-
-
-            <div class="row" *ngFor="let dephc of PHCHeadcountColection">
-              <div class="col-sm-8">{{dephc.dataElement}}</div>
+            <div class="row"  >
+              <div class="col-sm-6">{{pqkbzu3K48under5years}}</div>
               <!--  <div class="col-sm-3">{{appl.created}}</div>-->
-              <div class="col-sm-4">{{dephc.totalHeadcountdatavalue}}</div>
+              <div class="col-sm-3">{{pqkbzu3K48GMonthlyHeadCountTotal}}</div>
+
+              <div class="col-sm-3">{{pqkbzu3K48under5yearsphcPercentageContribution}}</div>
+
             </div>
-                 </div>
+
+            <div class="row">
+              <div class="col-sm-6">{{EnwfwzfrdQ7G59years}}</div>
+              <!--  <div class="col-sm-3">{{appl.created}}</div>-->
+              <div class="col-sm-3">{{EnwfwzfrdQ7MonthlyHeadCountTotal}}</div>
+              <div class="col-sm-3">{{EnwfwzfrdQ7G59yearsphcPercentageContribution}}</div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-6">{{B5g5X2k5Q8kG1019years}}</div>
+              <!--  <div class="col-sm-3">{{appl.created}}</div>-->
+              <div class="col-sm-3">{{B5g5X2k5Q8kMonthlyHeadCountTotal}}</div>
+              <div class="col-sm-3">{{B5g5X2k5Q8kG1019yearsphcPercentageContribution}}</div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-6">{{IovfSP4TNjFG20yearsandolder}}</div>
+              <!--  <div class="col-sm-3">{{appl.created}}</div>-->
+              <div class="col-sm-3">{{IovfSP4TNjFMonthlyHeadCountTotal}}</div>
+              <div class="col-sm-3">{{IovfSP4TNjFG20yearsandolderphcPercentageContribution}}</div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-6">Total Headcount</div>
+              <!--  <div class="col-sm-3">{{appl.created}}</div>-->
+              <div class="col-sm-3">{{TotalHeadCountTotal}}</div>
+            </div>
+
+
+
 </div>
 
 
 
-<label>{{TotalHeadCountTotal}}</label>
 
 
 
 
 
 
+          <!--
+          <label>{{pqkbzu3K48GMonthlyHeadCountTotal}}</label><br>
+          <label>{{EnwfwzfrdQ7MonthlyHeadCountTotal}}</label><br>
+          <label>{{B5g5X2k5Q8kMonthlyHeadCountTotal}}</label><br>
+          <label>{{IovfSP4TNjFMonthlyHeadCountTotal}}</label><br>
+          <label>{{TotalHeadCountTotal}}</label><br>
+-->
+
+
+<!--
           <div class="panel panel-default">
             <div class="panel-heading">Proportional Population contributions</div>
             <!--
@@ -98,8 +136,10 @@
                </li>
 
              </ul>
-             -->
+
           </div>
+
+    -->
 
           <div class="panel panel-default">
             <div class="panel-heading">Org-Unit Levels for</div>
