@@ -5,6 +5,7 @@ import {DatasetService} from '../providers/dataset.service';
 
 import {dataValues} from "../dataValues";
 import {PHCHeadcount} from "../PHCHeadcount";
+import {ClassMonth} from "../ClassMonth";
 
 
 @Component({
@@ -66,8 +67,21 @@ headcountDataLoaded: boolean;
   IovfSP4TNjFG20yearsandolderphcPercentageContribution: number=0;
 
 
+  MonthsInAyear: ClassMonth[];
 
 
+  Jan: ClassMonth;
+  Feb: ClassMonth;
+  Mar: ClassMonth;
+  Apr: ClassMonth;
+  May: ClassMonth;
+  Jun: ClassMonth;
+  Jul: ClassMonth;
+  Aug: ClassMonth;
+  Sep: ClassMonth;
+  Oct: ClassMonth;
+  Nov: ClassMonth;
+  Dec: ClassMonth;
 
   constructor(private orgUnitService: OrgUnitService, private dataElementService:DataElementService, private datasetService: DatasetService) {
     this.populationEstimateDataElements = [];
@@ -87,7 +101,79 @@ headcountDataLoaded: boolean;
     this.PHCHeadcountTotalHierachyCollection = [];
 
     this.pqkbzu3K48GMonthlyHeadCountTotal = 0;
+    this.MonthsInAyear= [];
+    this.Jan = new ClassMonth();
+    this.Jan.code = '01';
+    this.Jan.name=''
+    this.Jan.year=''
 
+    this.Feb= new ClassMonth();
+    this.Feb.name=''
+    this.Feb.year=''
+    this.Feb.code = '02';
+
+    this.Mar= new ClassMonth();
+    this.Mar.code = '03';
+    this.Mar.name=''
+    this.Mar.year=''
+
+    this.Apr= new ClassMonth();
+    this.Apr.code = '04';
+    this.Apr.name=''
+    this.Apr.year=''
+
+    this.May= new ClassMonth();
+    this.May.code = '05';
+    this.May.name=''
+    this.May.year=''
+
+    this.Jun= new ClassMonth();
+    this.Jun.code = '06';
+    this.Jun.name=''
+    this.Jun.year=''
+
+    this.Jul= new ClassMonth();
+    this.Jul.code = '07';
+    this.Jul.name=''
+    this.Jul.year=''
+
+    this.Aug= new ClassMonth();
+    this.Aug.code = '08';
+    this.Aug.name=''
+    this.Aug.year=''
+
+    this.Sep= new ClassMonth();
+    this.Sep.code = '09';
+    this.Sep.name=''
+    this.Sep.year=''
+
+    this.Oct= new ClassMonth();
+    this.Oct.code = '10';
+    this.Oct.name=''
+    this.Oct.year=''
+
+    this.Nov= new ClassMonth();
+    this.Nov.code = '11';
+    this.Nov.name=''
+    this.Nov.year=''
+
+    this.Dec= new ClassMonth();
+    this.Dec.code = '12';
+    this.Dec.name=''
+    this.Dec.year=''
+
+    this.MonthsInAyear.push(this.Jan);
+    this.MonthsInAyear.push(this.Feb);
+    this.MonthsInAyear.push(this.Mar);
+    this.MonthsInAyear.push(this.Apr);
+    this.MonthsInAyear.push(this.May);
+    this.MonthsInAyear.push(this.Jun);
+    this.MonthsInAyear.push(this.Jul);
+    this.MonthsInAyear.push(this.Aug);
+    this.MonthsInAyear.push(this.Sep);
+    this.MonthsInAyear.push(this.Oct);
+    this.MonthsInAyear.push(this.Nov);
+    this.MonthsInAyear.push(this.Dec);
   }
   ngOnInit() {
     console.log("Boki Boki");
