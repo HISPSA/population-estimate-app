@@ -299,108 +299,116 @@ let  populationEstimatesValues = 'http://localhost:8085/dhis/api/dataValueSets.j
            //   alert(index)
 
 
-              //loop though all months in a year
+              //loop though all months in a year starts here
               for (let month of  this.MonthsInAyear)
               {
-                this.periodCollection = '';
-                this.periodCollection =  this.year.toString()+month.code;
-
-           //     alert(this.periodCollection);
-              }
+               this.periodCollection = '';
+                this.periodCollection =  this.year +month.code;
 
 
+                //Looping through Headcounts starts here
+              //  MonthlyPHCHeadcount = 'http://localhost:8085/dhis/api/dataValueSets.json?dataSet=Ux8RWIJyIk3&period=201712&orgUnit='+orgHierachy.id
+                MonthlyPHCHeadcount = 'http://localhost:8085/dhis/api/dataValueSets.json?dataSet=Ux8RWIJyIk3&period='+this.periodCollection+'&'+'orgUnit='+orgHierachy.id
+                this.dataElementService.getDataelementsService(MonthlyPHCHeadcount).then( result => { this.MonthlyPHCHeadCounntTotalsDatavalues =  result.dataValues
+                  //  console.log(result)
+                  for (let phcHeadCount of  this.MonthlyPHCHeadCounntTotalsDatavalues )
+                  {
+                    if (phcHeadCount.dataElement == dataElements.id){
+                      this.TotalHeadCountTotal = this.TotalHeadCountTotal+ Number(phcHeadCount.value);
+                      if (phcHeadCount.dataElement == 'B5g5X2k5Q8k'){
+                        if (!isNaN( Number(phcHeadCount.value))){
+                          if (this.B5g5X2k5Q8kMonthlyHeadCountTotal==0){
+                            this.B5g5X2k5Q8kMonthlyHeadCountTotal= Number(phcHeadCount.value)
 
+                            // this.TotalHeadCountTotal = this.TotalHeadCountTotal+ Number(phcHeadCount.value);
+                            this.B5B5g5X2k5Q8kunder5years = dataElements.name;
+                          }else
+                          {
+                            this.B5g5X2k5Q8kMonthlyHeadCountTotal=this.B5g5X2k5Q8kMonthlyHeadCountTotal+Number(phcHeadCount.value);
+                            // this.TotalHeadCountTotal = this.TotalHeadCountTotal+ Number(phcHeadCount.value);
+                            this.B5B5g5X2k5Q8kunder5years = dataElements.name;
 
-              MonthlyPHCHeadcount = 'http://localhost:8085/dhis/api/dataValueSets.json?dataSet=Ux8RWIJyIk3&period=201712&orgUnit='+orgHierachy.id
-              this.dataElementService.getDataelementsService(MonthlyPHCHeadcount).then( result => { this.MonthlyPHCHeadCounntTotalsDatavalues =  result.dataValues
-                //  console.log(result)
-                for (let phcHeadCount of  this.MonthlyPHCHeadCounntTotalsDatavalues )
-                {
-                  if (phcHeadCount.dataElement == dataElements.id){
-                    this.TotalHeadCountTotal = this.TotalHeadCountTotal+ Number(phcHeadCount.value);
-                    if (phcHeadCount.dataElement == 'B5g5X2k5Q8k'){
-                      if (!isNaN( Number(phcHeadCount.value))){
-                        if (this.B5g5X2k5Q8kMonthlyHeadCountTotal==0){
-                          this.B5g5X2k5Q8kMonthlyHeadCountTotal= Number(phcHeadCount.value)
-
-                         // this.TotalHeadCountTotal = this.TotalHeadCountTotal+ Number(phcHeadCount.value);
-                          this.B5B5g5X2k5Q8kunder5years = dataElements.name;
-                        }else
-                        {
-                          this.B5g5X2k5Q8kMonthlyHeadCountTotal=this.B5g5X2k5Q8kMonthlyHeadCountTotal+Number(phcHeadCount.value);
-                         // this.TotalHeadCountTotal = this.TotalHeadCountTotal+ Number(phcHeadCount.value);
-                          this.B5B5g5X2k5Q8kunder5years = dataElements.name;
-
-                          // this.PHCHeadcountObject.totalHeadcountdatavalue = this.pqkbzu3K48GMonthlyHeadCountTotal;
+                            // this.PHCHeadcountObject.totalHeadcountdatavalue = this.pqkbzu3K48GMonthlyHeadCountTotal;
+                          }
+                          console.log("Total : B5g5X2k5Q8k:       "+this.B5g5X2k5Q8kMonthlyHeadCountTotal)
+                          console.log("Total Contribution : B5g5X2k5Q8k:       "+this.B5g5X2k5Q8kGunder5yearsphcPercentageContribution)
+                          console.log("Total TotalHeadCountTotal :        "+this.TotalHeadCountTotal)
                         }
-                        console.log("Total : B5g5X2k5Q8k:       "+this.B5g5X2k5Q8kMonthlyHeadCountTotal)
-                        console.log("Total Contribution : B5g5X2k5Q8k:       "+this.B5g5X2k5Q8kGunder5yearsphcPercentageContribution)
-                        console.log("Total TotalHeadCountTotal :        "+this.TotalHeadCountTotal)
-                      }
-                    }else if (phcHeadCount.dataElement == 'EnwfwzfrdQ7')
-                    {
-                      if (!isNaN( Number(phcHeadCount.value))){
-                        if (this.EnwfwzfrdQ7MonthlyHeadCountTotal==0){
-                          this.EnwfwzfrdQ7MonthlyHeadCountTotal= Number(phcHeadCount.value)
-                       //   this.TotalHeadCountTotal = this.TotalHeadCountTotal+ Number(phcHeadCount.value);
-                        }else
-                        {
-                          this.EnwfwzfrdQ7MonthlyHeadCountTotal=this.EnwfwzfrdQ7MonthlyHeadCountTotal+Number(phcHeadCount.value);
-                          // this.PHCHeadcountObject.totalHeadcountdatavalue = this.pqkbzu3K48GMonthlyHeadCountTotal;
-                         // this.TotalHeadCountTotal = this.TotalHeadCountTotal+ Number(phcHeadCount.value);
+                      }else if (phcHeadCount.dataElement == 'EnwfwzfrdQ7')
+                      {
+                        if (!isNaN( Number(phcHeadCount.value))){
+                          if (this.EnwfwzfrdQ7MonthlyHeadCountTotal==0){
+                            this.EnwfwzfrdQ7MonthlyHeadCountTotal= Number(phcHeadCount.value)
+                            //   this.TotalHeadCountTotal = this.TotalHeadCountTotal+ Number(phcHeadCount.value);
+                          }else
+                          {
+                            this.EnwfwzfrdQ7MonthlyHeadCountTotal=this.EnwfwzfrdQ7MonthlyHeadCountTotal+Number(phcHeadCount.value);
+                            // this.PHCHeadcountObject.totalHeadcountdatavalue = this.pqkbzu3K48GMonthlyHeadCountTotal;
+                            // this.TotalHeadCountTotal = this.TotalHeadCountTotal+ Number(phcHeadCount.value);
+                          }
+                          //  console.log("Total : EnwfwzfrdQ7:    "+this.EnwfwzfrdQ7MonthlyHeadCountTotal)
+                          //  console.log("Total Contribution : B5g5X2k5Q8k:       "+this.EnwfwzfrdQ7G59yearsphcPercentageContribution)
+                          //console.log("Total TotalHeadCountTotal :        "+this.TotalHeadCountTotal)
+                          this.EnwfwzfrdQ7G59years = dataElements.name;
                         }
-                      //  console.log("Total : EnwfwzfrdQ7:    "+this.EnwfwzfrdQ7MonthlyHeadCountTotal)
-                      //  console.log("Total Contribution : B5g5X2k5Q8k:       "+this.EnwfwzfrdQ7G59yearsphcPercentageContribution)
-                        //console.log("Total TotalHeadCountTotal :        "+this.TotalHeadCountTotal)
-                        this.EnwfwzfrdQ7G59years = dataElements.name;
-                      }
-                    }else if (phcHeadCount.dataElement == 'pqkbzu3K48G'){
+                      }else if (phcHeadCount.dataElement == 'pqkbzu3K48G'){
 
-                      if (!isNaN( Number(phcHeadCount.value))){
-                        if (this.pqkbzu3K48GMonthlyHeadCountTotal==0){
-                          this.pqkbzu3K48GMonthlyHeadCountTotal= Number(phcHeadCount.value)
+                        if (!isNaN( Number(phcHeadCount.value))){
+                          if (this.pqkbzu3K48GMonthlyHeadCountTotal==0){
+                            this.pqkbzu3K48GMonthlyHeadCountTotal= Number(phcHeadCount.value)
 
-                         // this.TotalHeadCountTotal = this.TotalHeadCountTotal+ Number(phcHeadCount.value);
-                        }else
-                        {
-                          this.pqkbzu3K48GMonthlyHeadCountTotal=this.pqkbzu3K48GMonthlyHeadCountTotal+Number(phcHeadCount.value);
-                          // this.PHCHeadcountObject.totalHeadcountdatavalue = this.pqkbzu3K48GMonthlyHeadCountTotal;
+                            // this.TotalHeadCountTotal = this.TotalHeadCountTotal+ Number(phcHeadCount.value);
+                          }else
+                          {
+                            this.pqkbzu3K48GMonthlyHeadCountTotal=this.pqkbzu3K48GMonthlyHeadCountTotal+Number(phcHeadCount.value);
+                            // this.PHCHeadcountObject.totalHeadcountdatavalue = this.pqkbzu3K48GMonthlyHeadCountTotal;
 
-                         // this.TotalHeadCountTotal = this.TotalHeadCountTotal+ Number(phcHeadCount.value);
+                            // this.TotalHeadCountTotal = this.TotalHeadCountTotal+ Number(phcHeadCount.value);
+                          }
+
+                          this.pqkbzu3K48G1019years = dataElements.name;
+                          //      console.log("Total : pqkbzu3K48G:        "+this.pqkbzu3K48GMonthlyHeadCountTotal)
+                          //    console.log("Total Contribution : B5g5X2k5Q8k:       "+this.pqkbzu3K481019yearsphcPercentageContribution)
+                          //    console.log("Total TotalHeadCountTotal :        "+this.TotalHeadCountTotal)
                         }
-
-                        this.pqkbzu3K48G1019years = dataElements.name;
-                  //      console.log("Total : pqkbzu3K48G:        "+this.pqkbzu3K48GMonthlyHeadCountTotal)
-                    //    console.log("Total Contribution : B5g5X2k5Q8k:       "+this.pqkbzu3K481019yearsphcPercentageContribution)
-                    //    console.log("Total TotalHeadCountTotal :        "+this.TotalHeadCountTotal)
-                      }
-                    }else if (phcHeadCount.dataElement == 'IovfSP4TNjF')
-                    {
-                      if (!isNaN( Number(phcHeadCount.value))){
-                        if (this.IovfSP4TNjFMonthlyHeadCountTotal==0){
-                          this.IovfSP4TNjFMonthlyHeadCountTotal= Number(phcHeadCount.value)
-                        //  this.TotalHeadCountTotal = this.TotalHeadCountTotal+ Number(phcHeadCount.value);
-                        }else
-                        {
-                          this.IovfSP4TNjFMonthlyHeadCountTotal=this.IovfSP4TNjFMonthlyHeadCountTotal+Number(phcHeadCount.value);
-                          // this.PHCHeadcountObject.totalHeadcountdatavalue = this.pqkbzu3K48GMonthlyHeadCountTotal;
-                       //   this.TotalHeadCountTotal = this.TotalHeadCountTotal+Number(phcHeadCount.value);
+                      }else if (phcHeadCount.dataElement == 'IovfSP4TNjF')
+                      {
+                        if (!isNaN( Number(phcHeadCount.value))){
+                          if (this.IovfSP4TNjFMonthlyHeadCountTotal==0){
+                            this.IovfSP4TNjFMonthlyHeadCountTotal= Number(phcHeadCount.value)
+                            //  this.TotalHeadCountTotal = this.TotalHeadCountTotal+ Number(phcHeadCount.value);
+                          }else
+                          {
+                            this.IovfSP4TNjFMonthlyHeadCountTotal=this.IovfSP4TNjFMonthlyHeadCountTotal+Number(phcHeadCount.value);
+                            // this.PHCHeadcountObject.totalHeadcountdatavalue = this.pqkbzu3K48GMonthlyHeadCountTotal;
+                            //   this.TotalHeadCountTotal = this.TotalHeadCountTotal+Number(phcHeadCount.value);
+                          }
+                          //     console.log("Total : IovfSP4TNjF:    "+this.IovfSP4TNjFMonthlyHeadCountTotal)
+                          //  console.log("Total Contribution : B5g5X2k5Q8k:       "+this.IovfSP4TNjFG20yearsandolderphcPercentageContribution)
                         }
-                   //     console.log("Total : IovfSP4TNjF:    "+this.IovfSP4TNjFMonthlyHeadCountTotal)
-                      //  console.log("Total Contribution : B5g5X2k5Q8k:       "+this.IovfSP4TNjFG20yearsandolderphcPercentageContribution)
+                        this.IovfSP4TNjFG20yearsandolder = dataElements.name;
                       }
-                      this.IovfSP4TNjFG20yearsandolder = dataElements.name;
+                      //  alert(phcHeadCount.dataElement)
+                      //alert(dataElements.id)
+                      this.B5g5X2k5Q8kGunder5yearsphcPercentageContribution = this.B5g5X2k5Q8kMonthlyHeadCountTotal/this.TotalHeadCountTotal;
+                      this.EnwfwzfrdQ7G59yearsphcPercentageContribution = this.EnwfwzfrdQ7MonthlyHeadCountTotal/this.TotalHeadCountTotal;
+                      this.pqkbzu3K481019yearsphcPercentageContribution = this.pqkbzu3K48GMonthlyHeadCountTotal/this.TotalHeadCountTotal;
+                      this.IovfSP4TNjFG20yearsandolderphcPercentageContribution = this.IovfSP4TNjFMonthlyHeadCountTotal/this.TotalHeadCountTotal;
+                      console.log("Total TotalHeadCountTotal :        "+this.TotalHeadCountTotal);
                     }
-                  //  alert(phcHeadCount.dataElement)
-                    //alert(dataElements.id)
-                    this.B5g5X2k5Q8kGunder5yearsphcPercentageContribution = this.B5g5X2k5Q8kMonthlyHeadCountTotal/this.TotalHeadCountTotal;
-                    this.EnwfwzfrdQ7G59yearsphcPercentageContribution = this.EnwfwzfrdQ7MonthlyHeadCountTotal/this.TotalHeadCountTotal;
-                    this.pqkbzu3K481019yearsphcPercentageContribution = this.pqkbzu3K48GMonthlyHeadCountTotal/this.TotalHeadCountTotal;
-                    this.IovfSP4TNjFG20yearsandolderphcPercentageContribution = this.IovfSP4TNjFMonthlyHeadCountTotal/this.TotalHeadCountTotal;
-                    console.log("Total TotalHeadCountTotal :        "+this.TotalHeadCountTotal);
                   }
-                }
-              }).catch(error => console.log(error));
+                }).catch(error => console.log(error));
+                //Looping through Headcounts ends here
+
+
+
+              }
+              //loop though all months in a year ends here '
+
+
+
+
+
             }
        /*
             if (dataElements.id == 'pqkbzu3K48G'){
