@@ -24,7 +24,7 @@
             <label   >From </label> <input type="Date" class="form-control"  name= "adkMaBHuDha" ngModel required="required"/>
             <label>Select a Period</label> <input type="Date" class="form-control"  name= "adkMaBHuDha" ngModel required="required"/> -->
 
-            <label>Select a Period</label> <input type="Date" class="form-control"  name= "adkMaBHuDha" ngModel required="required"/>
+            <label>Select a Period</label> <input type="Date" class="form-control"  name= "adkMaBHuDha" (change)="onchange($event)"/>
 
             <!--
             <select class="form-control" id="orgunitId"    >

@@ -59,16 +59,11 @@ headcountDataLoaded: boolean;
   pqkbzu3K48G1019years:string="";
   IovfSP4TNjFG20yearsandolder:string=""
 
-
-
   B5g5X2k5Q8kGunder5yearsphcPercentageContribution: number=0;
   EnwfwzfrdQ7G59yearsphcPercentageContribution: number=0;
   pqkbzu3K481019yearsphcPercentageContribution: number=0;
   IovfSP4TNjFG20yearsandolderphcPercentageContribution: number=0;
-
-
   MonthsInAyear: ClassMonth[];
-
 
   Jan: ClassMonth;
   Feb: ClassMonth;
@@ -82,6 +77,14 @@ headcountDataLoaded: boolean;
   Oct: ClassMonth;
   Nov: ClassMonth;
   Dec: ClassMonth;
+
+  year: number;
+  month:number ;
+  day: number;
+
+  periodCollection: string='';
+
+
 
   constructor(private orgUnitService: OrgUnitService, private dataElementService:DataElementService, private datasetService: DatasetService) {
     this.populationEstimateDataElements = [];
@@ -295,6 +298,19 @@ let  populationEstimatesValues = 'http://localhost:8085/dhis/api/dataValueSets.j
 
            //   alert(index)
 
+
+              //loop though all months in a year
+              for (let month of  this.MonthsInAyear)
+              {
+                this.periodCollection = '';
+                this.periodCollection =  this.year.toString()+month.code;
+
+           //     alert(this.periodCollection);
+              }
+
+              
+
+
               MonthlyPHCHeadcount = 'http://localhost:8085/dhis/api/dataValueSets.json?dataSet=Ux8RWIJyIk3&period=201712&orgUnit='+orgHierachy.id
               this.dataElementService.getDataelementsService(MonthlyPHCHeadcount).then( result => { this.MonthlyPHCHeadCounntTotalsDatavalues =  result.dataValues
                 //  console.log(result)
@@ -450,13 +466,18 @@ let  populationEstimatesValues = 'http://localhost:8085/dhis/api/dataValueSets.j
   GetPopulationtotalstasaa(){
   }
 
+
   onchange($event) {
-      alert('hhhhhhhhhhhhh')
+    var input = $event.target.value;
+    var d = new Date( input );
+    if ( !!d.valueOf() ) { // Valid date
+     this.year = d.getFullYear();
+     this.month = d.getMonth();
+     this.day = d.getDate();
+      //alert(this.year);
+      }
+    else { /* Invalid date */ }
   }
-
-
-
-
 
 
   GetTotalHeadCount(){  }
@@ -466,6 +487,9 @@ let  populationEstimatesValues = 'http://localhost:8085/dhis/api/dataValueSets.j
 
 
   CalculatePouplationEstimates(){}
+
+
+
 
 
 
