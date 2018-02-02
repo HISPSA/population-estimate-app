@@ -12,9 +12,8 @@ export class DataElementService {
 
     headers: Headers;
     options: RequestOptions;
-
-	  constructor(private http:Http) {
-      this.headers = new Headers({ 'Content-Type': 'application/json', 'Accept': 'q=0.8;application/json;q=0.9', 'Authorization' : 'Basic ' + btoa('Comfort_Mankga_SWD:Mathematics315@')});
+  constructor(private http:Http) {
+      this.headers = new Headers({ 'Content-Type': 'application/json', 'Accept': 'q=0.8;application/json;q=0.9', 'Authorization' : 'Basic ' + btoa('Comfort_Mankga:Mathematics315@')});
 this.options = new RequestOptions({ headers: this.headers });  }
 
 
@@ -37,5 +36,12 @@ this.options = new RequestOptions({ headers: this.headers });  }
     return Promise.reject(error.message || error);
   }
 
-
+  update(url: string, param: any): Promise<any> {
+    let body = JSON.stringify(param);
+    return this.http
+      .put(url, body, this.options)
+      .toPromise()
+      .then(this.extractData)
+      .catch(this.handleError);
+  }
 }
